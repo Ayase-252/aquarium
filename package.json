@@ -1,0 +1,21 @@
+{
+  "name": "aquarium",
+  "version": "0.1.0",
+  "description": "a private bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-telegram-bot-api": "^0.30.4",
+    "axios": "^0.18.0",
+    "koa": "^2.7.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "socks-proxy-agent": "^4.0.1",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
+  }
+}
