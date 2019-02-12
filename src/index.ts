@@ -1,7 +1,6 @@
 import BotConfig from './bot.config'
 import Bot from './bot'
-import { startSystemGreetingSrv } from './services/start-system-greeting';
-
+import { startSystemGreetingSrv } from './services/start-system-greeting'
 
 const bot = new Bot({
   token: BotConfig.authorization_token,
@@ -9,4 +8,4 @@ const bot = new Bot({
   isUseProxy: true
 })
 
-bot.dispatch(/\/start/, startSystemGreetingSrv)
+bot.dispatch('start', startSystemGreetingSrv)

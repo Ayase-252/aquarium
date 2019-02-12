@@ -10,7 +10,7 @@ type BotOptionsType = {
 
 export type BotCallbackType = (args: {
   chatId: number
-  matches: RegExpMatchArray | null
+  params: string[]
   bot: TelegramBot
 }) => void
 
@@ -26,12 +26,14 @@ class Bot {
     // missing url or uri parameter in request, which should be unnecessary
     this._bot = new TelegramBot(token, opt as any)
   }
-  dispatch(reg: RegExp, handler: BotCallbackType) {
+  dispatch(command: string, handler: BotCallbackType) {
+    const reg = new RegExp(`\/${command}(?: (.+))?`)
     this._bot.onText(reg, (message, matches) => {
       const chatId = message.chat.id
+      const params = matches && matches[1] ? matches[1].split(' ') : []
       handler({
         chatId,
-        matches,
+        params,
         bot: this._bot
       })
     })
