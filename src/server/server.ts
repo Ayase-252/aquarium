@@ -2,7 +2,7 @@ import Koa from 'koa'
 import Router from 'koa-router'
 import koaBody from 'koa-body'
 
-type HandlerType = (req: {}) => string
+export type HandlerType = (req: { [k: string]: any }) => string
 type HandlerMapType = {
   [key: string]: HandlerType
 }
