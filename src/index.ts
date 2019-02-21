@@ -1,4 +1,4 @@
-import BotConfig from './bot.config'
+import BotConfig from '../bot.config'
 import Bot from './bot'
 import { startSystemGreetingSrv } from './services/start-system-greeting'
 
