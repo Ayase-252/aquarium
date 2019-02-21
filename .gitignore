@@ -128,3 +128,4 @@ $RECYCLE.BIN/
 bot.config.ts
 TODO
 bot.config.json
+.coverage
