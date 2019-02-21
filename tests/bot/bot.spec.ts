@@ -1,5 +1,5 @@
-import Bot from '../src/bot'
-import { sendTextMessage } from './utils'
+import Bot from '../../src/bot/bot'
+import { sendTextMessage } from '../utils'
 
 describe('dispatch', () => {
   let bot: Bot
