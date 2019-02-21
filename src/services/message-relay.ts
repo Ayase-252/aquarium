@@ -8,7 +8,7 @@ export const createMessageRelayService = ({
 }: {
   processor: HandlerType
   bot: TelegramBot
-  chatId: string
+  chatId: number | string
 }): HandlerType => {
   return (req): string => {
     const res = processor(req)

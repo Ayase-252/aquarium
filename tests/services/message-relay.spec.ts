@@ -8,16 +8,16 @@ describe('MessageRelayService', () => {
     const messageRelaySrv = createMessageRelayService({
       processor: ({ message }) => `received: ${message}`,
       bot: telegramBot,
-      chatId: '123456'
+      chatId: 123456
     })
     messageRelaySrv({ message: 'hello world' })
     expect(telegramBot.sendMessage).toBeCalledWith(
-      '123456',
+      123456,
       'received: hello world'
     )
     messageRelaySrv({ message: 'one more time' })
     expect(telegramBot.sendMessage).toBeCalledWith(
-      '123456',
+      123456,
       'received: one more time'
     )
   })

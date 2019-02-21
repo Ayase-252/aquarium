@@ -1,4 +1,4 @@
-import { BotCallbackType } from '../bot'
+import { BotCallbackType } from '../bot/bot'
 
 export const startSystemGreetingSrv: BotCallbackType = ({
   chatId,
